@@ -9,7 +9,7 @@
 }
 
 /*about me page styles*/
-#about-me-body {
+.center {
     text-align: center;
 }
 #about-me-body>img {
@@ -24,14 +24,12 @@
 }
 
 /*experience page styles*/
-#experience-body {
-    background-color: #eee;
-}
 #experience-heading, #skills-heading {
     font-family: 'Montserrat', sans-serif;
 }
 #experience-list {
     list-style: katakana;
+    background-color: #eee;
 }
 
 /*skills page styles*/
