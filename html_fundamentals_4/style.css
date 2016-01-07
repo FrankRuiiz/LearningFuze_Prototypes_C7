@@ -1,0 +1,40 @@
+/*navigation*/
+.nav {
+    list-style: none;
+}
+.nav li {
+    display: inline;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/*about me page styles*/
+#about-me-body {
+    text-align: center;
+}
+#about-me-body>img {
+    height: 200px;
+    float: left;
+}
+#about-me-heading {
+    color: darkgoldenrod;
+}
+#about-me-p {
+    font-size: 12px;
+}
+
+/*experience page styles*/
+#experience-body {
+    background-color: #eee;
+}
+#experience-heading, #skills-heading {
+    font-family: 'Montserrat', sans-serif;
+}
+#experience-list {
+    list-style: katakana;
+}
+
+/*skills page styles*/
+#skills-list li ul li {
+    color: darkgoldenrod;
+}
