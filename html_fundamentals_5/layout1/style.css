@@ -1,0 +1,40 @@
+/*header */
+#header {
+    background-color: yellow;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid black;
+}
+/*menu*/
+#menu {
+    list-style: none;
+}
+#menu li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/*main-content*/
+#main-content {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid black;
+}
+
+/*footer*/
+#footer {
+    background-color: yellow;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border: 1px solid black;
+}
+#footer ul {
+    list-style: none;
+}
+
+i {
+    margin-right: 10px;
+}
