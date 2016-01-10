@@ -1,28 +1,33 @@
 /*global*/
+body, html {
+    height: 100vh;
+}
 body {
     position: relative;
     top: 120px;
 }
-
 /*header*/
 #header {
     background-color: yellow;
-    padding-top: 30px;
-    padding-bottom: 30px;
     border: 1px solid black;
+    height: 15vh;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 /*menu*/
 #menu {
     list-style: none;
     text-align: center;
+    position: relative;
+    top: 50%;
+    margin: 0;
+    padding: 0;
 }
-
 #menu li {
     display: inline-block;
 }
-
 #menu li a {
     background-color: darkgray;
     padding: 15px;
@@ -31,18 +36,14 @@ body {
     color: black;
     font-weight: bold;
 }
-
 #menu li a:hover {
     background-color: black;
     color: darkgray;
 }
-
 /*main content*/
 #main-content {
-    border: 1px solid black;
     text-align: center;
 }
-
 #main-content h3 {
     margin-top: 100px;
 }
