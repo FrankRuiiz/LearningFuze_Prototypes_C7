@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>CSS Design and Layout 2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" type="text/css">
+    <style>
+        header {
+            width: 100vw;
+            height: 15vh;
+            background-color: #eee;
+            position: relative;
+        }
+        header img {
+            position: relative;
+            left: 10px; ;
+            display: inline-block;
+            height: 80%;
+            vertical-align: middle;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: 15px;
+        }
+        header h1 {
+            display: inline-block;
+            position: relative;
+            margin: auto 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5em;
+            line-height: 2em;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px limegreen, 0 0 5px darkgreen;
+        }
+
+        nav {
+            display: inline-block;
+            position: absolute;
+            right:0;
+            bottom: 0;
+            width: 50%;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+            <img src="images/ghostbusters.png" alt="Ghostbusters logo">
+            <h1>This is the company name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+</body>
+</html>
