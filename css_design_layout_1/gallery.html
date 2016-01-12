@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layout 3</title>
+    <meta charset="UTF-8">
+    <style>
+        /*sets the maximum width of the body/content to 1000 px*/
+        body {
+            max-width: 1000px;
+            margin: 100px  auto;
+        }
+        /*foats the div containing the img and description left to place them next to each other*/
+        .img {
+            float: left;
+            border: 1px solid #ccc;
+            margin: 5px;
+            width: 180px;
+        }
+        /*will highlight the thumbnail with the indicated border*/
+        .img:hover {
+            border: 3px solid #777;
+        }
+        /*sets the size of th img element in relation to the .img class div since the images are no all the same size, the height is off*/
+        .img img {
+            width: 100%;
+            height: auto;
+        }
+        /*adds some padding and aligns the text to center for the descriptions*/
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <a href="images/family.jpg" target="_blank">
+            <img src="images/family.jpg" alt="A picture of my family and I" width="300" height="200">
+        </a>
+        <div class="desc">The Ruiz Family.</div>
+    </div>
+
+    <div class="img">
+        <a href="images/deadlift.jpg" target="_blank">
+            <img src="images/deadlift.jpg" alt="Working on my deadlifts." width="300" height="200">
+        </a>
+        <div class="desc">Working on my deadlift.</div>
+    </div>
+
+    <div class="img">
+        <a href="images/hiking.jpg" target="_blank">
+            <img src="images/hiking.jpg" alt="Enjoying the view on top of Mt. Rubidoux" width="300" height="200">
+        </a>
+        <div class="desc">Enjoying the view on top of Mt. Rubidoux.</div>
+    </div>
+
+    <div class="img">
+        <a href="images/atthegym.jpg" target="_blank">
+            <img src="images/atthegym.jpg" alt="Lifting weights with some friends" width="300" height="200">
+        </a>
+        <div class="desc">I spend too much time at the gym.</div>
+    </div>
+
+    <div class="img">
+        <a href="images/havasu.jpg" target="_blank">
+            <img src="images/havasu.jpg" alt="At turtle beach, Lake Havasu, CA" width="300" height="200">
+        </a>
+        <div class="desc">My buddy Kenny and I having a good time in Lake Havasu.</div>
+    </div>
+</body>
+</html>

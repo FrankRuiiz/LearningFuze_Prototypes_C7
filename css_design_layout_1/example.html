@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layout 1</title>
+    <meta charset="UTF-8">
+    <style>
+        /*GLOBAL*/
+        /*setting margin and padding of div and body to 0*/
+        body,div {
+                 margin: 0;
+                 padding: 0;
+             }
+        /*used these three color classes for better visibility.*/
+        .red {
+            background-color: rgb(255,0,0);opacity:0.8;
+        }
+
+        .green {
+            background-color:rgb(0,255,0);opacity:0.8;
+        }
+
+        .blue {
+            background-color:rgb(0,0,255);opacity:0.8;
+        }
+
+        /*FEATURE SET 1_1*/
+        /*sets the containing div for feature set 1.1 to a max width of 75 % of viewport */
+        .feature_set_1_1 {
+            max-width: 75vw;
+        }
+        /*places 5% margin between first and second div; pushing div two to the right*/
+        .feature_set_1_1 > :first-child {
+            margin-right: 5%;
+        }
+        /*places 5% margin between second and third div; pushing third div to the right*/
+        .feature_set_1_1 > :last-child {
+            margin-left: 5%;
+        }
+        /*width had to be adjusted to fit all divs on one line, although at one point they will collaps on a smaller */
+        /*screen. Border box shrinks the content box but necessary in order to keep things aligned without having to */
+        /*mess with the percentages again.*/
+        .child-1-div {
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 200px;
+            width: 29.7%;
+        }
+        /*FEATURE SET 1_2*/
+        /*some top margin for spacing*/
+        .feature_set_1_2 {
+            margin-top: 50px;
+        }
+        /*selects the child divs for feature set 1_2*/
+        .child-2-div {
+            width: 25vw;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 3px dashed black;
+        }
+        /*selects first child of feature set 1_2*/
+        .feature_set_1_2 > :first-child {
+            padding: 10px 0;
+        }
+        /*selects second child of feature set 1_2*/
+        .feature_set_1_2 > :nth-child(2) {
+            padding: 5px 5px 0 0;
+        }
+        /*selects last child of feature set 1_2*/
+        .feature_set_1_2 > :last-child {
+            padding: 20px 10px 30px 5px;
+        }
+        /*FEATURE SET 1_3*/
+        /*selects feature set 1_3 div*/
+        .feature_set_1_3 {
+            height: 300px;
+            background-color: #eee;
+            margin-top: 50px;
+        }
+        /*selects feature set 1_3 first child*/
+        .feature_set_1_3 > :first-child {
+            height: 25%;
+        }
+        /*selects second div using nth-child selector*/
+        .feature_set_1_3 > :nth-child(2) {
+            height: 25vh;
+        }
+        /*selects last child*/
+        .feature_set_1_3 > :last-child {
+            height: 10rem;
+        }
+        /*selects divs for feature set 1_3*/
+        .child-3-div {
+            width: 100px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!--feature_set_1_1-->
+    <div class="feature_set_1_1">
+        <div class="child-1-div red">div 1</div>
+        <div class="child-1-div green">div 2</div>
+        <div class="child-1-div blue">div 3</div>
+    </div>
+
+    <!--feature_set_1_2-->
+    <div class="feature_set_1_2">
+        <div class="child-2-div red">div 1</div>
+        <div class="child-2-div green">div 2</div>
+        <div class="child-2-div blue">div 3</div>
+    </div>
+
+    <!--feature_set_1_3-->
+    <div class="feature_set_1_3">
+        <div class="child-3-div red">div 1</div>
+        <div class="child-3-div green">div 2</div>
+        <div class="child-3-div blue">div 3</div>
+    </div>
+</body>
+</html>
