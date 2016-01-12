@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css" type="text/css">
     <style>
+        /*FEATURE SET 1*/
+        /*HEADER*/
         header {
-            width: 100vw;
-            height: 15vh;
+            width: 100%;
+            height: 20vh;
             background-color: #eee;
             position: relative;
         }
@@ -32,37 +34,119 @@
             color: white;
             text-shadow: 1px 1px 2px black, 0 0 25px limegreen, 0 0 5px darkgreen;
         }
-
+        /*NAVIGATION*/
         nav {
             display: inline-block;
             position: absolute;
-            right:0;
+            right: 0;
             bottom: 0;
             width: 50%;
         }
-
         nav ul {
             list-style: none;
         }
-
         nav ul li {
             display: inline-block;
+            width: 30%;
+            text-align: right;
         }
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+        }
+        /*MAIN CONTENT*/
 
-
+        /*FEATURE SET 2*/
+        #fs-2 {
+             width: 100%;
+             height: 30vh;
+             background-color: pink;
+         }
+        #fs-2 > div {
+            height: 100%;
+            border: 2px solid red;
+            box-sizing: border-box;
+        }
+        #fs-2 > :first-child {
+            width: 25%;
+            background-color: green;
+            float: left;
+            text-overflow: clip;
+        }
+        #fs-2 > :last-child {
+            width: 75%;
+            background-color: blue;
+            float: right;
+        }
+        /*FEATURE SET 3*/
+        #fs-3 {
+            width: 100%;
+            height: 30vh;
+        }
+        #fs-3 > div {
+            height: 100%;
+            display: inline-block;
+            border: 2px dashed lightcoral;
+            box-sizing: border-box;
+        }
+        #fs-3 > :first-child {
+            width: 25%;
+            background-color: lightgreen;
+        }
+        #fs-3 > :last-child {
+            width: 75%;
+            background-color: lightblue;
+        }
+        /*FEATURE SET 4*/
+        footer {
+            width: 100%;
+            height: 20vh;
+            background-color: #eee;
+        }
+        /*FEATURE SET 5 */
+        .container {
+            width: 70vw;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
-    <header>
-            <img src="images/ghostbusters.png" alt="Ghostbusters logo">
-            <h1>This is the company name</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-    </header>
+    <div class="container">
+        <header>
+                <img src="images/ghostbusters.png" alt="Ghostbusters logo">
+                <h1>Ghostbusters</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <!--FEATURE SET 2-->
+        <section id="fs-2">
+            <div>
+                div 1
+            </div>
+            <div>
+                div 2
+            </div>
+        </section>
+        <!--FEATURE SET 3-->
+        <!--used the comment between the div elements in order to have them sit side by side, is this practical?-->
+        <section id="fs-3">
+            <div>
+                div 1
+            </div><!--
+        --><div>
+                div 2
+            </div>
+        </section>
+        <!--FEATURE SET 4-->
+        <footer>
+            Frank Ruiz - 2016 - Learning Fuze
+        </footer>
+    </div>
 </body>
 </html>
