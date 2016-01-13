@@ -1,0 +1,164 @@
+/*GLOBAL*/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+/*HEADER*/
+/*set header to 15vh 100w*/
+header {
+    display:inline-block;
+    width: 100vw;
+    height: 15vh;
+}
+
+header > ul {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+header > ul > li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header > ul > li > ul > li {
+    color: green;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    position: relative;
+    left:0;
+
+}
+
+.collapsible {
+    position: relative;
+    display: inline-block;
+}
+
+.collapsible:hover {
+    background-color: grey;
+    color: white;
+}
+
+.collapsible > ul {
+    display: none;
+    position:absolute;
+    left: -15px;
+    background-color: #000;
+    min-width: 100px;
+    padding: 4px;
+
+}
+
+.collapsible ul li {
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+    position: relative;
+    text-align: center;
+}
+
+header > ul:hover .collapsible > ul {
+    display: block;
+}
+
+.collapsible li:hover {
+    background-color: slategray;
+}
+
+/*SECTION*/
+
+section {
+    display: inline-block;
+    width: 100vw;
+    height: 60vh;
+}
+
+article {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+article img {
+    width: 35%;
+    float: left;
+    margin: 10px;
+}
+
+article p:nth-of-type(1) {
+    color: green;
+}
+
+aside {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+aside > h3 {
+   text-align: right;
+}
+
+aside > h3 span {
+    color: blue;
+}
+
+aside p:nth-of-type(1) {
+    color: red;
+    font-weight: bold;
+}
+
+aside p:nth-of-type(1):first-letter {
+    color: white;
+    font-size: 1.7em;
+    background-color: gray;
+    padding: 2px;
+    border-radius: 10px 0;
+}
+
+aside p:nth-of-type(2):first-letter {
+    font-size: 1.3em;
+    padding: 2px;
+    border: 1px solid gray;
+    border-radius: 0 10px;
+}
+
+aside p:nth-of-type(3) {
+    color: green;
+}
+
+aside p:nth-of-type(3):first-letter {
+    padding: 2px;
+    border: 1px solid gray;
+    border-radius: 0 10px;
+    color: black;
+}
+
+
+
+
+
+
+/*FOOTER*/
+footer {
+    display: inline-block;
+    width: 100vw;
+    height: 25vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer > div {
+
+}
