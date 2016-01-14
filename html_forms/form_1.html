@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>html_forms</title>
+    <meta charset="8">
+    <style>
+        input[type="text"] {
+            background-color: #eee;
+            font-family:  sans-serif;
+            border: 2px solid red;
+            box-shadow: 5px 5px 3px gray;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://learningfuze.com/echo.php" method="get">
+        <label for="firstname">First Name</label><br>
+        <input type="text" id="firstname" name="firstname" value="Frank"><br>
+        <label for="lastname">Last Name</label><br>
+        <input type="text" id="lastname" name="lastname" value="Ruiz"><br>
+
+        <hr>
+
+        <label for="message">Message:</label><br>
+        <textarea name="message" id="message" cols="30" rows="10">Learning how to use forms!</textarea><br>
+
+        <hr>
+
+        What's your favorite food?<br>
+        <input type="radio" name="food" id="pizza" value="pizza" checked><label for="pizza">Pizza</label><br>
+        <input type="radio" name="food" id="sushi" value="sushi"><label for="sushi">Sushi</label><br>
+        <input type="radio" name="food" id="burgers" value="burgers"><label for="burgers">Burgers</label><br>
+
+        <hr>
+
+        What are your favorite games?<br>
+        <input type="checkbox" name="games" id="battlefield" value="battlefield"><label for="battlefield">Battlefield
+        </label><br>
+        <input type="checkbox" name="games" id="halo" value="halo"><label for="halo">Halo</label><br>
+        <input type="checkbox" name="games" id="gta" value="gta"><label for="gta">GTA</label><br>
+        <input type="checkbox" name="games" id="nogames" value="nogames" disabled><label for="nogames">I don't play
+        games
+        </label><br>
+
+        <hr>
+
+        <select multiple>
+            <option value="avatar">Avatar</option>
+            <option value="batman">Batman</option>
+            <option value="terminator">Terminator</option>
+            <option value="avengers">Avengers</option>
+        </select>
+
+        <hr>
+
+        <input type="submit" value="Submit Form">
+
+
+
+
+
+    </form>
+</body>
+</html>
