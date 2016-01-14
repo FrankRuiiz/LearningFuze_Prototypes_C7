@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>html_forms</title>
+    <title>html_forms Feature Set 1</title>
     <meta charset="8">
     <style>
         input[type="text"] {
@@ -14,25 +14,23 @@
 </head>
 <body>
     <form action="http://learningfuze.com/echo.php" method="get">
+        <!--first and last name text input-->
         <label for="firstname">First Name</label><br>
         <input type="text" id="firstname" name="firstname" value="Frank"><br>
         <label for="lastname">Last Name</label><br>
         <input type="text" id="lastname" name="lastname" value="Ruiz"><br>
-
         <hr>
-
+        <!--message textarea -->
         <label for="message">Message:</label><br>
         <textarea name="message" id="message" cols="30" rows="10">Learning how to use forms!</textarea><br>
-
         <hr>
-
+        <!--favorite food radio-->
         What's your favorite food?<br>
         <input type="radio" name="food" id="pizza" value="pizza" checked><label for="pizza">Pizza</label><br>
         <input type="radio" name="food" id="sushi" value="sushi"><label for="sushi">Sushi</label><br>
         <input type="radio" name="food" id="burgers" value="burgers"><label for="burgers">Burgers</label><br>
-
+        <!--favorite games chckbox-->
         <hr>
-
         What are your favorite games?<br>
         <input type="checkbox" name="games" id="battlefield" value="battlefield"><label for="battlefield">Battlefield
         </label><br>
@@ -41,18 +39,15 @@
         <input type="checkbox" name="games" id="nogames" value="nogames" disabled><label for="nogames">I don't play
         games
         </label><br>
-
         <hr>
-
+        <!--favorit movie select list-->
         <select multiple>
             <option value="avatar">Avatar</option>
             <option value="batman">Batman</option>
             <option value="terminator">Terminator</option>
             <option value="avengers">Avengers</option>
         </select>
-
         <hr>
-
         <input type="submit" value="Submit Form">
 
 
