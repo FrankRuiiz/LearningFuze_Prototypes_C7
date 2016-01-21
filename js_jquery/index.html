@@ -21,7 +21,8 @@
             //It creates an event handler for when div1 is clicked
             $("#div1").click(function(){
                 console.log("You clicked div 1, It is pink"); //Fix the output to reflect div1's new color
-
+                count = ++count;
+                $(this).text("Click Count: " + count);
             });
 
             //Here is another .click example that changes the color of the div every time you click on it
@@ -31,16 +32,22 @@
                 //Here is an if statement that outputs the color of div2 to the console when it is clicked
                 if($("#div2").hasClass("green")){
                     //If it has the class "green" then it will output "I am Green!"
-                    console.log("I am Green!");
+                    $(this).text("I am Green!");
                 }else{
                     //else it does not have the class "green" then it will output "I am White!"
-                    console.log("I am White!");
+                    $(this).text("I am White!");
                 }
             });
             //----Write your code bellow----//
+            $('#div3, #div4').addClass('card-back');
 
+            $('#div3').click(function(){
+                $(this).toggleClass("flag");
+            });
 
-
+            $('#div4').click(function(){
+                $(this).toggleClass("path");
+            });
             //----Write your code above----//
         });
     </script>
