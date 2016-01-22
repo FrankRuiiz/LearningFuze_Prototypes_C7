@@ -57,15 +57,33 @@
                 var pg_2 = $('#playground2');
                 var div1 = $('<div>').text('Here is some awesome div text').addClass('awesome_class');
                 var div2 = $('<div>').text('Here is MORE awesome div text').addClass('awesome_class').attr('id','my_awesome_div2');
-                var div3 =
-                        $('<div>').html('Here is <strong>EVEN MORE</strong> awesome div text').addClass('awesome_class').attr({'id':'my_awesome_div3', 'data-coolness':'high'});
+                var div3 = $('<div>').html('Here is <strong>EVEN MORE</strong> awesome div text').addClass('awesome_class').attr({'id':'my_awesome_div3', 'data-coolness':'high'});
 
                 pg_2.append(div1);
                 pg_2.append(div2);
                 pg_2.append(div3);
             }
-            playGround2()
+            playGround2();
             //playground 3 code
+            function playGround3(){
+                var pg_3 = $('#playground3');
+                var ul = $('<ul>').addClass('neato');
+                var link1 = $('<li>').text('Link 1');
+                var link2 = $('<li>').text('Link 2');
+                var link3 = $('<li>').text('Link 3');
+                var fig = $('<figure>').addClass('awesome_picture');
+                var awesomeImg = $('<img>').attr('src','http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg');
+                var awesomeCap = $('<figcaption>').html('That\'s right<span class="bold_text"> you are</span>');
+
+                pg_3.append(ul);
+                ul.append(link1);
+                ul.append(link2);
+                ul.append(link3);
+                pg_3.append(fig);
+                fig.append(awesomeImg);
+                fig.append(awesomeCap);
+            }
+            playGround3();
         });
     </script>
 </head>
