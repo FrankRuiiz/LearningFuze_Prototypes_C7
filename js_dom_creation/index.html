@@ -42,30 +42,35 @@
         $(document).ready(function () {
             //playground 1 code
             function playGround1() {
+//              create elements for playground 1
                 var pg_1 = $('#playground1');
                 var heading = $('<h1>').text('I am a heading');
                 var par1 = $('<p>').text('This is an awesome paragraph');
                 var par2 = $('<p>').text('This has red text').css('color','red');
-
+//              add new elements to dom
                 pg_1.append(heading);
                 pg_1.append(par1);
                 pg_1.append(par2);
             }
+//          function call
             playGround1();
             //playground 2 code
             function playGround2() {
+//              create elements for playground 2
                 var pg_2 = $('#playground2');
                 var div1 = $('<div>').text('Here is some awesome div text').addClass('awesome_class');
                 var div2 = $('<div>').text('Here is MORE awesome div text').addClass('awesome_class').attr('id','my_awesome_div2');
                 var div3 = $('<div>').html('Here is <strong>EVEN MORE</strong> awesome div text').addClass('awesome_class').attr({'id':'my_awesome_div3', 'data-coolness':'high'});
-
+//              add new elements to dom
                 pg_2.append(div1);
                 pg_2.append(div2);
                 pg_2.append(div3);
             }
+//          function call
             playGround2();
             //playground 3 code
             function playGround3(){
+//              create elements for playground 3
                 var pg_3 = $('#playground3');
                 var ul = $('<ul>').addClass('neato');
                 var link1 = $('<li>').text('Link 1');
@@ -74,7 +79,7 @@
                 var fig = $('<figure>').addClass('awesome_picture');
                 var awesomeImg = $('<img>').attr('src','http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg');
                 var awesomeCap = $('<figcaption>').html('That\'s right<span class="bold_text"> you are</span>');
-
+//              add new elements to dom
                 pg_3.append(ul);
                 ul.append(link1);
                 ul.append(link2);
@@ -83,6 +88,7 @@
                 fig.append(awesomeImg);
                 fig.append(awesomeCap);
             }
+//          function call
             playGround3();
         });
     </script>
