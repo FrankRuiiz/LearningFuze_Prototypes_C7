@@ -41,9 +41,30 @@
     <script>
         $(document).ready(function () {
             //playground 1 code
+            function playGround1() {
+                var pg_1 = $('#playground1');
+                var heading = $('<h1>').text('I am a heading');
+                var par1 = $('<p>').text('This is an awesome paragraph');
+                var par2 = $('<p>').text('This has red text').css('color','red');
 
+                pg_1.append(heading);
+                pg_1.append(par1);
+                pg_1.append(par2);
+            }
+            playGround1();
             //playground 2 code
+            function playGround2() {
+                var pg_2 = $('#playground2');
+                var div1 = $('<div>').text('Here is some awesome div text').addClass('awesome_class');
+                var div2 = $('<div>').text('Here is MORE awesome div text').addClass('awesome_class').attr('id','my_awesome_div2');
+                var div3 =
+                        $('<div>').html('Here is <strong>EVEN MORE</strong> awesome div text').addClass('awesome_class').attr({'id':'my_awesome_div3', 'data-coolness':'high'});
 
+                pg_2.append(div1);
+                pg_2.append(div2);
+                pg_2.append(div3);
+            }
+            playGround2()
             //playground 3 code
         });
     </script>
