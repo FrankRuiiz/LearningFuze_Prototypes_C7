@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript Intro Reference Data Types</title>
+    <meta charset="utf-8">
+    <script>
+//        FEATURE SET 1.0
+        var studentsArray = ['Chip', 'Deanna', 'Mayra', 'Korey', 'Frank'];
+        console.log(studentsArray[2]);
+//        FEATURE SET 1.1
+        console.log(studentsArray);
+        console.log(studentsArray.length);
+        studentsArray.push('Tim', 'Trisha');
+        console.log(studentsArray.length);
+        console.log(studentsArray);
+
+//        FEARTURE SET 2.0
+        student = {};
+        student.firstName = 'Frank';
+        student.lastName = 'Ruiz';
+        student.age = 28;
+        student.school = 'Learning-Fuze';
+        student.questionList = [];
+        student.hasQuestion = false;
+//        FEATURE SET 2.1
+        student.greeting = function(){
+            return "Hello, my name is " + student.firstName;
+        }
+        student.aboutMe = function(){
+            return "My full name is " + student.firstName + " " + student.lastName + ", I am " + student.age +
+                    " years old and am a student at " + student.school + "."
+        }
+        student.askQuestion = function(question){
+            student.questionList.push(question);
+            student.hasQuestion = true;
+            return "A question has been added to your list"
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
