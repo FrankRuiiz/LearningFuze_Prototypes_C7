@@ -48,9 +48,7 @@
                 var par1 = $('<p>').text('This is an awesome paragraph');
                 var par2 = $('<p>').text('This has red text').css('color','red');
 //              add new elements to dom
-                pg_1.append(heading);
-                pg_1.append(par1);
-                pg_1.append(par2);
+                pg_1.append(heading,par1,par2);
             }
 //          function call
             playGround1();
@@ -62,9 +60,7 @@
                 var div2 = $('<div>').text('Here is MORE awesome div text').addClass('awesome_class').attr('id','my_awesome_div2');
                 var div3 = $('<div>').html('Here is <strong>EVEN MORE</strong> awesome div text').addClass('awesome_class').attr({'id':'my_awesome_div3', 'data-coolness':'high'});
 //              add new elements to dom
-                pg_2.append(div1);
-                pg_2.append(div2);
-                pg_2.append(div3);
+                pg_2.append(div1,div2,div3);
             }
 //          function call
             playGround2();
@@ -81,12 +77,9 @@
                 var awesomeCap = $('<figcaption>').html('That\'s right<span class="bold_text"> you are</span>');
 //              add new elements to dom
                 pg_3.append(ul);
-                ul.append(link1);
-                ul.append(link2);
-                ul.append(link3);
+                ul.append(link1,link2,link3);
                 pg_3.append(fig);
-                fig.append(awesomeImg);
-                fig.append(awesomeCap);
+                fig.append(awesomeImg,awesomeCap);
             }
 //          function call
             playGround3();
