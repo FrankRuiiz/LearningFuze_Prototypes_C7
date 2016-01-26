@@ -14,7 +14,7 @@
         console.log(studentsArray.length);
         console.log(studentsArray);
 
-//        FEARTURE SET 2.0
+//        FEATURE SET 2.0
         student = {};
         student.firstName = 'Frank';
         student.lastName = 'Ruiz';
@@ -31,10 +31,31 @@
                     " years old and am a student at " + student.school + "."
         }
         student.askQuestion = function(question){
+//          Push() adds the question to questionList
             student.questionList.push(question);
             student.hasQuestion = true;
             return "A question has been added to your list"
         }
+        student.answerQuestion = function(){
+            if (student.hasQuestion === true) {
+                student.hasQuestion = false;
+//              pop() returns the last question from questionList
+                return student.questionList.pop();
+            }
+            else {
+                return "You have no pending questions"
+            }
+        }
+
+//        FEATURE SET 2.2
+        console.log("Greeting Function:",student.greeting());
+        console.log("About Me Function:",student.aboutMe());
+        console.log("Answer Question Function:",student.answerQuestion());
+        console.log("Ask Question 1 Function:",student.askQuestion("Whats your favorite color?"));
+        console.log("Ask Question 2 Function:",student.askQuestion("What are you doing this weekend?"));
+        console.log("Ask Question 3 Function:",student.askQuestion("What kind of music do you like?"));
+        console.log("Answer Question Function:",student.answerQuestion());
+        console.log(student.questionList);
     </script>
 </head>
 <body>
