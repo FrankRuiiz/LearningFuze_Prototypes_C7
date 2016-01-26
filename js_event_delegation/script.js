@@ -8,3 +8,12 @@
 
 //========== Write your code below ===========//
 
+//FEATURE SET 1
+$(document).ready(function(){
+
+    $('#list').on('click','li',function(){
+        console.log($(this).text());
+    });
+});
+
+//FEATURE SET 2
