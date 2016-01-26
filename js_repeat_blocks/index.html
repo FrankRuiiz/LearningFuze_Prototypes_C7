@@ -42,13 +42,78 @@
             desk2: 'Peggy',
             desk3: 'LoneStar',
             desk4: 'George',
-            desk5: 'Sheldon',
-        }
+            desk5: 'Sheldon'
+        };
         console.log("Each student and their desk number:");
 //      goes through classRoom object and logs the key and key value
         for(key in classRoom){
             console.log(classRoom[key] + " is at " + key);
         }
+
+//        FEATURE SET 3
+        var studentArray = [
+            {
+                name: 'Bob',
+                grade: 87
+            },
+            {
+                name: 'Fred',
+                grade: 82
+            },
+            {
+                name: 'George',
+                grade: 93
+            },
+            {
+                name: 'Robert',
+                grade: 85
+            }
+        ];
+
+//        Solution One
+        function findStudent(studentName){
+//            loops through the studentArray
+            for (i = 0; i < studentArray.length; i++) {
+//                checks to see if param studentName matches the student name on the current object/aray item (i)
+                if (studentName == studentArray[i].name) {
+//                  if it does, we return the sentence below
+                    return 'Found ' + studentName + ' their grade is: ' + studentArray[i].grade;
+                }
+            }
+//          if none match this sentence will return
+            return 'Student ' + studentName + ' not found';
+        }
+
+        console.log(findStudent('George'));
+        console.log(findStudent('Fred'));
+        console.log(findStudent('Hank'));
+
+//        Solution Two - Per the hints on the prototype
+
+        function findStudent2(name){
+//            set variable initial values
+            var output = ' ';
+            var i = 0;
+            var found = false;
+//          while found is false and i is less than studentArray length, run this code
+            while (!found && i < studentArray.length){
+                var student = studentArray[i];
+                if (student.name == name) {
+                    output = "Found " + name + " Grade: " + student.grade;
+                    found = true;
+                }
+                i++;
+            }
+            if(!found) {
+                output = "Student " + name + " not found.";
+            }
+            return output;
+        }
+
+        console.log(findStudent2('George'));
+        console.log(findStudent2('Fred'));
+        console.log(findStudent2('Hank'));
+
 
     </script>
 </head>
