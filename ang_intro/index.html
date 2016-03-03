@@ -9,14 +9,20 @@
 
 </head>
 <body>
+    <!--FEATURE SET 1-->
     <!--ng-init is used in this example to initialize a variable, myVar-->
     <div ng-init="myVar='It\'s Friday, you ain\'t got no job...and you ain\'t go shit to do?!' ">
         <!--The double curly braces are called an EXPRESSION in Angular, This will display the variable in the DOM-->
         {{myVar}}
     </div>
 
-    <div>
-
+    <!--FEATURE SET 2-->
+    <div ng-init="carArray=['Audi', 'BMW', 'Infinity', 'Lexus']">
+        <ul>
+            <!--ng-repeat is like a loop, in this case it goes through carArray. In the expression {{car}}, each car
+            brand will be written to the DOM .... carArray[car]-->
+            <li ng-repeat="car in carArray">{{car}}</li>
+        </ul>
     </div>
 </body>
 </html>
