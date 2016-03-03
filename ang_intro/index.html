@@ -1,12 +1,22 @@
 <!doctype html>
-<html lang="en">
+<!--An angular app is declared with the ng-app directive-->
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
     <title>Angular Intro</title>
     <!-- Add Angular CDN below -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 
 </head>
 <body>
+    <!--ng-init is used in this example to initialize a variable, myVar-->
+    <div ng-init="myVar='It\'s Friday, you ain\'t got no job...and you ain\'t go shit to do?!' ">
+        <!--The double curly braces are called an EXPRESSION in Angular, This will display the variable in the DOM-->
+        {{myVar}}
+    </div>
 
+    <div>
+
+    </div>
 </body>
 </html>
