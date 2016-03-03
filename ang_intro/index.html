@@ -24,5 +24,13 @@
             <li ng-repeat="car in carArray">{{car}}</li>
         </ul>
     </div>
+
+    <!--FEATURE SET 3-->
+    <div>
+        <!--The ng-model directive is used to bind a variable, in this case myInput, to the input field-->
+        <input type="text" ng-model="myInput">
+        <!--The expression below will write the text entered in the input field above into the p tag-->
+        <p>{{myInput}}</p>
+    </div>
 </body>
 </html>
