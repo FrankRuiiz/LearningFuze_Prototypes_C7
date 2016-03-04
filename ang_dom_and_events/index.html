@@ -3,10 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Angular DOM and Events</title>
+    <style>
+        div button {
+            width: 30%;
+            height: 20%;
+            padding: 30px;
+            font-weight: bold;
+            font-size: 1.5em;
+            background-color: green;
+            color: #FFF;
+            border-radius: 15px;
+        }
+
+        div button:active {
+            background-color: darkgreen;
+            color: #EEE;
+        }
+        div button:disabled {
+            background-color: firebrick;
+            color: #EEE;
+        }
+
+    </style>
     <!-- Add Angular CDN below -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 </head>
-<body>
+    <!--FEATURE SET 1-->
+    <body ng-app="">
+        <!--ng-init sets the variable status to true, which will make the button below initially set to disabled-->
+        <div ng-init="mySwitch=true; counter=0">
 
-</body>
+            <!--FEATURE SET 2-->
+            <!--ng-hide will hide 'Button Enabled' when the status is set to true-->
+            <span ng-hide="mySwitch == true">Button Enabled</span><br>
+            <!--ng-show will show the 'Button Disabled' when the status is true-->
+            <span ng-show="mySwitch == true">Button Disabled</span> <br>
+
+            <!--ng-disabled binds the status variable to the button for the toggle-->
+            <button ng-disabled="mySwitch" ng-click="counter=counter+1" >Click Me</button>
+            <input type="checkbox" ng-model="mySwitch" >
+            <h1>You clicked the button {{counter}} times!</h1>
+        </div>
+
+    </body>
 </html>
