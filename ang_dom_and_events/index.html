@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>Angular DOM and Events</title>
     <style>
+        body {
+            background-color: #EEE;
+        }
+        .container {
+            width: 70vw;
+            margin: 200px auto;
+            text-align: center;
+        }
+
         div button {
             width: 30%;
             height: 20%;
@@ -23,27 +32,31 @@
             background-color: firebrick;
             color: #EEE;
         }
-
     </style>
     <!-- Add Angular CDN below -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 </head>
     <!--FEATURE SET 1-->
     <body ng-app="">
-        <!--ng-init sets the variable status to true, which will make the button below initially set to disabled-->
-        <div ng-init="mySwitch=true; counter=0">
 
-            <!--FEATURE SET 2-->
-            <!--ng-hide will hide 'Button Enabled' when the status is set to true-->
-            <span ng-hide="mySwitch == true">Button Enabled</span><br>
-            <!--ng-show will show the 'Button Disabled' when the status is true-->
-            <span ng-show="mySwitch == true">Button Disabled</span> <br>
+        <div class="container">
+            <!--ng-init sets the variable status to true, which will make the button below initially set to disabled-->
+            <div ng-init="mySwitch=true; counter=0">
 
-            <!--ng-disabled binds the status variable to the button for the toggle-->
-            <button ng-disabled="mySwitch" ng-click="counter=counter+1" >Click Me</button>
-            <input type="checkbox" ng-model="mySwitch" >
-            <h1>You clicked the button {{counter}} times!</h1>
+                <!--FEATURE SET 2-->
+                <!--ng-hide will hide 'Button Enabled' when the status is set to true-->
+                The Button
+                <span ng-hide="mySwitch == true">Enabled</span>
+                <!--ng-show will show the 'Button Disabled' when the status is true-->
+                <span ng-show="mySwitch == true">Disabled</span> <br>
+
+                <!--ng-disabled binds the status variable to the button for the toggle-->
+                <button ng-disabled="mySwitch" ng-click="counter=counter+1" >Click Me</button>
+                <hr>
+                <label for="toggle">Toggle Active</label>
+                <input name="toggle" type="checkbox" ng-model="mySwitch" >
+                <h1>You clicked the button {{counter}} times!</h1>
+            </div>
         </div>
-
     </body>
 </html>
