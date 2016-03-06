@@ -1,0 +1,26 @@
+
+/*FORM INPUT AREA*/
+#input_area {
+    background-color: #EEE;
+    padding: 1%;
+}
+
+#input_area textarea {
+    min-height: 100px;
+}
+
+
+
+
+#list_display {
+    padding: 1%;
+    background-color: lightgoldenrodyellow;
+}
+
+
+/*DISPLAY AREA*/
+
+#list_display table {
+     table-layout: fixed;
+     word-wrap: break-word;
+ }
