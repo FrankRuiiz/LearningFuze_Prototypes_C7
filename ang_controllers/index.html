@@ -19,27 +19,37 @@
         <input id="email" type="email" ng-model="fc.form.email"><br>
 
         <label for="comments">Comments:</label><br>
-        <textarea id="comments" cols="30" rows="10" value="30" ng-model="fc.form.comments"
+        <textarea id="comments" cols="30" rows="10" ng-model="fc.form.comments"
                   ng-disabled="fc.disableComments(fc.form.comments)"></textarea><br>
 
         <p>Characters Remaining: {{fc.charactersLeft(fc.form.comments)}}</p>
 
-        <button ng-click="fc.addFormData()">Add</button>
+        <button ng-click="fc.addFormRow()">Add</button>
 
         <hr>
 
-        <table>
-            <tr>
-                <th>Full Name:</th>
-                <th>Email:</th>
-                <th>Comments:</th>
-            </tr>
-            <tr ng-repeat="form in fc.formArray">
-                <td>{{form.fName + " " + form.lName}}</td>
-                <td>{{form.email}}</td>
-                <td>{{form.comments}}</td>
-            </tr>
-        </table>
+        <div ng-controller="tableController as tc">
+            <p>Total Entries: {{tc.totalEntries()}} </p>
+            <table>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Comments</th>
+                    <th>Remove Item</th>
+                </tr>
+                <tr ng-repeat="form in formArray">
+                    <td>{{form.fName + " " + form.lName}}</td>
+                    <td>{{form.email}}</td>
+                    <td>{{form.comments}}</td>
+                    <td><button ng-click="tc.removeRow($index);">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>{{fc.form.fName + ' ' + fc.form.lName}}</td>
+                    <td>{{fc.form.email}}</td>
+                    <td>{{fc.form.comments}}</td>
+                </tr>
+            </table>
+        </div>
     </div>
     
 
@@ -50,27 +60,27 @@
         var app = angular.module("myApp", []);
         
         /*controller for myApp*/
-        app.controller("formController", function(){
+        app.controller("formController", function($scope){
             this.form = {};
-            this.maxLength = 5;
-            this.formArray = [
-//                {
-//                    fName: "Frank",
-//                    lName: "Ruiz",
-//                    email: 'frank.ruiz.limon@gmail.com',
-//                    comments: 'this is sucking right now'
-//                },
-//                {
-//                    fName: "Kenny",
-//                    lName: "Rios",
-//                    email: 'kenny.rios@gmail.com',
-//                    comments: 'Yo'
-//                },
+            this.maxLength = 10;
+            $scope.formArray = [
+                {
+                    fName: "Frank",
+                    lName: "Ruiz",
+                    email: 'frank.ruiz.limon@gmail.com',
+                    comments: 'this is sucking right now'
+                },
+                {
+                    fName: "Kenny",
+                    lName: "Rios",
+                    email: 'kenny.rios@gmail.com',
+                    comments: 'Yo'
+                },
             ];
-            this.addFormData = function(){
+            this.addFormRow = function(){
                 console.log('add Form Data Called');
-                this.formArray.push(this.form);
-                console.log('Form Array', this.formArray);
+                $scope.formArray.push(this.form);
+                console.log('Form Array', $scope.formArray);
                 this.form = {};
             };
             this.charactersLeft = function(text){
@@ -88,9 +98,11 @@
                 if (text == undefined) {
                     return false;
                 }
-                else if (text) {
-                    var text_length = text.length;
-                    if(text_length >= this.maxLength) {
+                else {
+                    //could have also done this:
+                    //var text_length = text.length;
+                    //text_length >= this.maxLength;
+                    if(this.charactersLeft(text) <= 0) {
                         return true;
                     }
                     else {
@@ -98,6 +110,13 @@
                     }
                 }
             };
+        }).controller("tableController", function($scope){
+            this.removeRow = function(index) {
+                $scope.formArray.splice(index, 1);
+            };
+            this.totalEntries = function(){
+                return $scope.formArray.length;
+            }
         });
     </script>
 </body>
