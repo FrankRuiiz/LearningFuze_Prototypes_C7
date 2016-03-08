@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <title>Angular Services Intro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 </head>
 <body>
 
     <div ng-controller="searchController as sc" class="container">
-        <div class="row">
+        <div class="row header">
             <div class="col-sm-12 text-center">
                 <h1>Itunes Artist Search</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
-                <label for="artist_search">Enter your favorite artist's name:</label>
+            <div class="col-sm-6 text-center">
+                <label for="artist_search">Enter Artist to Search:</label>
                 <input id="artist_search" type="text" ng-model="sc.searchInput">
-                <button ng-click="sc.getData();">Search</button>
+                <button class="btn btn-success" ng-click="sc.getData();">Search</button>
             </div>
 
-            <div ng-if="sc.data" class="col-sm-6">
+            <div id="artist_genre" ng-if="sc.data" class="col-sm-6 text-center">
                 <span>Search Results for:</span>
                 <span>{{sc.data[0].artistName}}</span>
                 <span>Genre: {{sc.data[0].primaryGenreName}}</span>

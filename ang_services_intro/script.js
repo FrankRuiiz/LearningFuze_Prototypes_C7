@@ -4,7 +4,7 @@ var app = angular.module("itunesSearch", []);
 
 app.controller("searchController", function($http, $log) {
     var self = this;
-    self.searchInput;
+    self.searchInput = 'bruno mars';
     this.customURL = function(searchTerm) {
         return 'https://itunes.apple.com/search?term=' + self.searchInput + '&callback=JSON_CALLBACK';
     };
