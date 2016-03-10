@@ -103,7 +103,7 @@ $(function ($) {
         $("#edit-modal").modal('hide');
     });
 
-    /** DELETE OPERATIONS ==================================
+    /** DELETE OPERATIONS =================================
      *
      */
 
