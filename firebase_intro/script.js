@@ -5,7 +5,7 @@ $(function ($) {
      */
     var submitBtn = $('#add-student-btn'),
         sgtTableElement = $('#student-table'),
-        firebaseRef = new Firebase("https://lfchallenge.firebaseio.com/users/data");
+        firebaseRef = new Firebase("https://lfchallenge.firebaseio.com/students");
 
     /** Click handler to submit student information
      * Take values of the student-add-form
@@ -36,16 +36,16 @@ $(function ($) {
         console.log("The read failed: " + errorObject.code);
     });
 
-    firebaseRef.on("child_changed", function (studentSnapShot) {
-        updateDOM(studentSnapShot);
-    }, function (errorObject) {
-        console.log("The read failed: " + errorObject.code);
-    });
 
     /** Update Operations ======================
      * Click handler to update student data and send to firebase
      * Get the unique id of any student
      */
+    firebaseRef.on("child_changed", function (studentSnapShot) {
+        updateDOM(studentSnapShot);
+    }, function (errorObject) {
+        console.log("The read failed: " + errorObject.code);
+    });
 
     /** Edit button handler
      *
@@ -85,6 +85,11 @@ $(function ($) {
             newGrade = $('#modal-edit-grade').val();
         console.log('student updated', 'newName: ', newName, 'newCourse: ', newCourse, 'newGrade: ', newGrade);
         // using the correct method, send the new student values to firebase to be updated
+        studentFirebaseReference.update({
+            name: newName,
+            course: newCourse,
+            grade: newGrade
+        });
     }
 
     /** Click handler for modal confirm button */
@@ -94,7 +99,7 @@ $(function ($) {
         var studentFirebaseRef = firebaseRef.child($('#edit-modal').find('#student-id').val());
         // edit form click handler
         // Send the correct variable into the student edit function
-
+        studentEdit(studentFirebaseRef);
         $("#edit-modal").modal('hide');
     });
 
@@ -113,6 +118,7 @@ $(function ($) {
             $('#' + rowId).remove();
         });
         // Delete the student with the correct firebase method
+        studentFirebaseRef.remove();
     });
 
     /* Clear out inputs in the add-student-form */
