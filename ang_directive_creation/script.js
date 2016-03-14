@@ -53,3 +53,10 @@ app.directive('displayBoard', function(){
        controllerAs: 'gc'
    }
 });
+
+app.directive('infoBar', function(){
+   return {
+       restrict: 'E',
+       templateUrl: 'info-bar-template.html'
+   }
+});
