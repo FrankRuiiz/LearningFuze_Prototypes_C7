@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js OOP</title>
+    <script>
+
+        /** Feature Set 1 **/
+
+        function Coin_stack(starting_amount) {
+            // Sets initial coin value
+            this.value =  starting_amount;
+
+            /** Feature set 2 **/
+
+            // Method to add coins
+            this.add_coins = function(coins_to_add) {
+                this.value += coins_to_add;
+            };
+
+            // Method to remove coins
+            this.remove_coins = function(coins_to_remove) {
+                if(this.value >= coins_to_remove) {
+                    this.value -= coins_to_remove;
+                    return coins_to_remove;
+                }
+                else if(this.value < coins_to_remove) {
+                    var coins_available = this.value;
+                    this.value = 0;
+                    return coins_available;
+                }
+            }
+        }
+
+        /** Feature set 3 **/
+        Coin_stack.prototype.transfer_coins = function(from_coin_stack, amount) {
+            this.add_coins(from_coin_stack.remove_coins(amount));
+        };
+
+        var my_coin_stack = new Coin_stack(50);
+        console.log('my_coin_stack contains ' + my_coin_stack.value + ' coins.');
+
+        my_coin_stack.add_coins(15);
+        console.log('I have ' + my_coin_stack.value + ' coins in my coin stack.');
+
+        my_coin_stack.remove_coins(37);
+        console.log('I have ' + my_coin_stack.value + ' coins in my coin stack');
+
+        my_coin_stack.remove_coins(55);
+        console.log('I have ' + my_coin_stack.value + ' coins in my coin stack');
+
+        console.log('***********************************************************');
+
+        var erics_coins = new Coin_stack(50);
+        var dans_coins = new Coin_stack(50);
+
+        console.log("Dan's coins: " + dans_coins.value);
+        console.log("Eric's coins: " + erics_coins.value);
+
+        erics_coins.transfer_coins(dans_coins, 30);
+
+        console.log('**********************************************************');
+
+        console.log("Dan's coins: " + dans_coins.value);
+        console.log("Eric's coins: " + erics_coins.value);
+
+        console.log('**********************************************************');
+
+        dans_coins.transfer_coins(erics_coins, 120);
+
+        console.log("Dan's coins: " + dans_coins.value);
+        console.log("Eric's coins: " + erics_coins.value);
+
+
+    </script>
+</head>
+<body>
+
+<h1>JavaScript OOP Prototype</h1>
+
+</body>
+</html>
